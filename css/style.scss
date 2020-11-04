@@ -1,0 +1,136 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+//Visibility
+.hide-for-mobile {
+  @media (max-width: 63.9375em) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @media (min-width: 64em) {
+    display: none;
+  }
+}
+
+.button {
+  color: $darkViolet;
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.625rem 1.25rem;
+  &:active {
+    border: none;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &-justify-spacebetween {
+    justify-content: space-between;
+  }
+
+  &-justify-center {
+    justify-content: center;
+  }
+  &-align-items-center {
+    align-items: center;
+  }
+}
+
+.header {
+  padding: 1.5em 10em;
+  @media (max-width: 63.9375em) {
+    padding: 1.5em;
+  }
+  a {
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    color: $darkGrayishViolet;
+    &:hover {
+      color: $veryDarkViolet;
+    }
+  }
+  .button {
+    border: 2px solid $darkViolet;
+    background-color: white;
+    margin-left: 20px;
+    &:hover {
+      background-color: $darkViolet;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  height: 600px;
+  padding: 1.5em 11em;
+  background-color: $darkViolet;
+  color: white;
+  font-family: "Karla", sans-serif;
+  &__text {
+    flex: 1;
+    hr {
+      position: absolute;
+      width: 150px;
+      text-align: right;
+    }
+    h1 {
+      font-family: "DM Serif Display", sans-serif;
+      font-size: 4.8rem;
+      font-weight: 400;
+      line-height: 1;
+    }
+    p {
+      letter-spacing: 1px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .button {
+      color: white;
+      border: 2px solid white;
+      background-color: $darkViolet;
+      &:hover {
+        background-color: white;
+        color: $darkViolet;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__photo {
+    flex: 1;
+  }
+}

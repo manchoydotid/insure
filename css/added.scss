@@ -1,0 +1,35 @@
+header {
+  background-color: aqua;
+  padding: 30px 170px;
+  ul {
+    display: block;
+    float: right;
+    margin: -1px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    li {
+      display: inline;
+      margin-left: 20px;
+      text-transform: uppercase;
+      color: $darkGrayishViolet;
+      cursor: pointer;
+      &:hover {
+        color: $veryDarkViolet;
+      }
+    }
+  }
+}
+
+.button {
+  background-color: $veryDarkViolet;
+  padding: 10px 30px;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.main {
+  background-color: $darkViolet;
+  height: 600px;
+  margin: 0;
+}
